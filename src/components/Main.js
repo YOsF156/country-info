@@ -10,6 +10,7 @@ export default function Main() {
     const [inputVal, setInputVal] = useState("")
     // 
     useEffect(() => {
+
         fetch("https://restcountries.com/v3.1/all")
             .then((res) => res.json())
             .then((data) => {
@@ -20,7 +21,9 @@ export default function Main() {
 
 
 
-    if (!countriesList) return <h1>loading...</h1>
+    if (!countriesList) return <div>No countries<h1>loading...</h1></div>
+
+
     const filteredList = countriesList.filter(country => country.name.common.toLowerCase().startsWith(inputVal.toLowerCase()))
     console.log(filteredList);
 
