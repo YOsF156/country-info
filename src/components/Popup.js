@@ -3,12 +3,8 @@ import { PopupContext } from "../App"
 
 export default function Popup() {
 
-    const [popup, setPopup] = useContext(PopupContext)
 
-    return <div
-        className={`overlay ${popup ? '' : 'close'}`}
-        onClick={() => setPopup('')}
-    >
-        <div className='popup'>{popup}</div>
+    return <div >
+        <div className='popup'></div>
     </div>
 }

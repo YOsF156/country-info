@@ -5,18 +5,14 @@ import { createContext, useState } from 'react';
 import Popup from './components/Popup';
 
 
-export const PopupContext = createContext()
 
 function App() {
 
-  const popupState = useState('')
   return (
     <div className="App">
-      <PopupContext.Provider value={popupState}>
 
-        <Main />
-        <Popup />
-      </PopupContext.Provider>
+      <Main />
+      {/* <Popup /> */}
     </div>
   );
 }
