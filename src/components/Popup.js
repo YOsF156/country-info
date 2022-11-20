@@ -1,10 +1,15 @@
 import { useContext } from "react"
-import { PopupContext } from "../App"
+import { popupContext } from "../App"
 
 export default function Popup() {
 
 
-    return <div >
-        <div className='popup'></div>
+    const { popup, setPopup } = useContext(popupContext)
+
+    return <div
+        className={`overlay ${popup ? "" : "close"}`}
+        onClick={() => setPopup('')}
+    >
+        <div className='popup'>{popup}</div>
     </div>
 }

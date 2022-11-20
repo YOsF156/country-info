@@ -1,19 +1,21 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 .App {
   max-width: 600px;
   margin: auto;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -23,7 +25,7 @@ header {
   align-items: center;
 }
 
-ul {
+ul.main {
   list-style: none;
   height: 80vh;
   overflow: hidden;
@@ -33,7 +35,12 @@ ul {
 li {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgb(0, 0, 0);
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  background-color: #dadabd;
+  cursor: pointer;
 }
 
 li .flag {
@@ -56,7 +63,7 @@ li label {
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -71,6 +78,8 @@ li label {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
+  height: 70%;
+  overflow-y: scroll;
 }
 
 .countryOpen h2 {
